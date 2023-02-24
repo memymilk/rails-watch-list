@@ -11,13 +11,12 @@ Bookmark.destroy_all
 Movie.destroy_all
 List.destroy_all
 
-
 puts "create data"
 
 20.times do
-  movie = Movie.create(title: Faker::Name.name, overview: Faker::Markdown.emphasis, rating: rand(1..5), poster_url: "https://source.unsplash.com/random/?#{Faker::Food.fruits}" )
-  list = List.create(name: "#{Faker::Name.name} - #{rand(1..10)}")
-  bookmarks = Bookmark.create(comment: Faker::Markdown.emphasis, movie: movie, list: list)
+  Movie.create(title: Faker::Name.name, overview: Faker::Markdown.emphasis, rating: rand(1..5), poster_url: "https://source.unsplash.com/random/?#{Faker::Food.fruits}" )
+  # list = List.create(name: "#{Faker::Name.name} - #{rand(1..10)}")
+  # Bookmark.create(comment: Faker::Markdown.emphasis, movie: movie, list: list)
 end
 
 puts "done"

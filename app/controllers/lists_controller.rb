@@ -8,9 +8,13 @@ class ListsController < ApplicationController
   end
 
   def create
+    
     @list = List.new(list_params)
-    @list.save
-    redirect_to list_path(@list)
+    if @list.save!
+      redirect_to list_path(@list)
+    else
+      render :new
+    end
   end
 
   def show
@@ -22,6 +26,6 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :photo)
   end
 end
