@@ -1,8 +1,9 @@
-<div style="text-align:center;margin-top:40px;">
+<div class="main_container">
 <h1 style="margin:auto">All my lists</h1>
-<br>
-<% link_to "New List",  new_list_path %>
-<div class="d-flex flex-row col-6"  style="display:flex; flex-wrap:wrap; flex-direction:row; justify-content:space-between; gap:10px 20px; row-gap:10px; column-gap:20px;margin:auto"  >
+
+<br><div class="d-flex flex-column flex-container">
+
+
   <% @lists.each do |list| %>
     <div class="card col-3" style="width: 18rem;">
       <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
@@ -15,5 +16,6 @@
 
   <% end %>
 </div>
-<%=  link_to "make new list", new_list_path %>
+<br>
+<%=  link_to "➕ Make new list", new_list_path, class: "btn btn-primary" %>
 </div>

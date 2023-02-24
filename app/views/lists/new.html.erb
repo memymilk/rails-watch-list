@@ -1,5 +1,10 @@
+<div class="main_container">
+<h1 style="margin:auto">Make new list</h1>
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
   <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
+<br>
+<%=  link_to "Back to main", root_path() %>
+</div>

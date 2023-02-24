@@ -10,3 +10,38 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body{
+  background-color:white;
+}
+
+.main_container{
+  max-width:800px;
+  background-color:whitesmoke;
+  margin-top:20px;
+  margin:auto;
+  padding:40px;
+}
+
+h1{
+  font-size:24pt;
+  color:#db8336;
+}
+a{
+  text-decoration:none;
+  color: #367adb;
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap:10px 20px;
+  row-gap:10px;
+  column-gap:20px;
+}
+
+.list-image{
+  text-align:center;
+}
