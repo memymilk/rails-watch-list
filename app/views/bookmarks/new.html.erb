@@ -1,0 +1,14 @@
+<div style="text-align:center;margin-top:40px;">
+
+    <div class="card col-3" style="width: 18rem;margin:auto">
+      <div class="card-body">
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+    <%= f.association :movie, promt: "select a movie" %>
+  <%= f.button :submit %>
+<% end %>
+
+
+</div>
+</div>
+</div>

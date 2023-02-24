@@ -1,0 +1,18 @@
+<div style="text-align:center;margin-top:40px;">
+<h1 style="margin:auto">All my lists</h1>
+<br>
+<% link_to "New List",  new_list_path %>
+<div class="d-flex flex-row col-6"  style="display:flex; flex-wrap:wrap; flex-direction:row; justify-content:space-between; gap:10px 20px; row-gap:10px; column-gap:20px;margin:auto"  >
+  <% @lists.each do |list| %>
+    <div class="card col-3" style="width: 18rem;">
+      <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+      <div class="card-body">
+        <p class="card-text">
+          <%= link_to list.name, list_path(list) %>
+        </p>
+      </div>
+  </div>
+
+  <% end %>
+</div>
+</div>

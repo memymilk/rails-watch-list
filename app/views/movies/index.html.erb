@@ -1,0 +1,31 @@
+<h1>Movies#index</h1>
+<p>Find me in app/views/movies/index.html.erb</p>
+
+<% @movies.each do |movie| %>
+
+
+<div style="display:flex;flex-direction: row">
+<div class="card" style="width: 18rem;background-image:url('')">
+  <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+  <div class="card-body">
+    <p class="card-text">
+    <%= movie.title %>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+ <% link_to movie_path(movie) do %>
+
+
+ <p><%= movie.title %> </p>
+
+
+ <% end %> 
+</div>
+<% end %>
+
+</div>
